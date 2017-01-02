@@ -1,0 +1,23 @@
+{
+  "name": "bangla-spellcheck",
+  "version": "0.0.1",
+  "description": "A Bangla spell-cheker with a web interface.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Bangla",
+    "spelling",
+    "spell",
+    "spellcheck",
+    "check",
+    "Bengali"
+  ],
+  "author": "Asif Mehedi",
+  "license": "ISC",
+  "dependencies": {
+    "nodehun": "^2.0.11",
+    "nodehun-sentences": "^1.0.1"
+  }
+}
