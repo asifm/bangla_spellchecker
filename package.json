@@ -2,9 +2,9 @@
   "name": "bangla-spellcheck",
   "version": "0.0.1",
   "description": "A Bangla spell-cheker with a web interface.",
-  "main": "main.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon ./bin/www"
   },
   "keywords": [
     "Bangla",
@@ -17,8 +17,9 @@
   "author": "Asif Mehedi",
   "license": "ISC",
   "dependencies": {
+    "ejs": "^2.5.5",
+    "express": "^4.14.0",
     "nodehun": "^2.0.11",
-    "nodehun-sentences": "^1.0.1",
-    "express": "^4.14.0"
+    "nodehun-sentences": "^1.0.1"
   }
 }

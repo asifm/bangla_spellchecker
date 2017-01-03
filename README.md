@@ -4,6 +4,7 @@ A Bangla spellchecker with a web interface. The spellchecker will suggest correc
 
 ## Current limitations
 
+- inflected words are flagged even though correct (e.g. "দেশে"). 
 - fails to flag misspelt compound words (e.g. তেলেবাগুনে)
 - flags many proper nouns (e.g. সত্যজিত)
 - flags some words that are actually correct according to modern (reformed) spelling standards (e.g. বাঙালি)
@@ -12,6 +13,7 @@ A Bangla spellchecker with a web interface. The spellchecker will suggest correc
 ## Plans
 
 - Improved dictionaries
+    - Stemming support (so that inflected words are correctly identified)
     - Better suggestions for frequently misspelt words
     - Following a standard set of rules
 - Chrome extension
