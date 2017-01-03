@@ -19,22 +19,27 @@ var dict = new nodehun(affbuf, dictbuf)
 router.get('/search/:word', sendSuggestions)
 
 function sendSuggestions(request, response) {
+    var flag
     givenWord = request.params.word
 
     dict.spellSuggestions(givenWord, function(err, correct, suggestions, origWord){
-        var intro = `আপনি দিয়েছেন যে শব্দ: ${origWord}`
+        var intro = `<p>আপনার দিয়েছেন: ${origWord}</p>`
         if (err) {
-            reply = `${intro}. I'm sorry. Something went wrong. Please let us know what you tried so that we can fix the problem. The contact information is at the bottom of the page.`
+            flag = 'error'
         } else if (correct) {
-            reply = `<strong>${origWord}</strong> আমার অভিধানে আছে। সম্ভবত কোনো ভুল নেই।`
+            flag = 'correct'
         } else if (suggestions.length === 0){
-            reply = `${origWord} কি অন্য় ভাষার শব্দ? আমি শুধু বাংলা শব্দ চিনতে পারি।`
+            flag = 'foreign'
         } else {
+            flag = 'wrong'
             reply = suggestions
         }
         // response.send(reply)
-        response.render('search', {reply: reply})
-        console.log(reply)
+        response.render('search', {
+            intro: intro,
+            reply: reply,
+            flag: flag
+        })
     })
 }
 
