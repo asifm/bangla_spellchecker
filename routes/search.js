@@ -23,7 +23,7 @@ function sendSuggestions(request, response) {
     givenWord = request.params.word
 
     dict.spellSuggestions(givenWord, function(err, correct, suggestions, origWord){
-        var intro = `<p>আপনার দিয়েছেন: ${origWord}</p>`
+        var intro = `আপনি দিয়েছেন: ${origWord}`
         if (err) {
             flag = 'error'
         } else if (correct) {
