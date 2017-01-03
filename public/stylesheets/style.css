@@ -1,16 +1,24 @@
 body {
   padding: 50px;
-  font: 14px Helvetica, Arial, sans-serif;
+  font-size: 1.5em; 
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
 }
 
-.word-list {
+.word_list {
   color: #d30000;
 }
 
 .intro {
   color: #aaaaaa;
+}
+
+#word_input {
+  font-size: 2em;
+}
+#submit_word {
+  font-size: 1.2em;
 }

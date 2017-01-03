@@ -5,14 +5,11 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <form onsubmit="window.location = document.URL + 'search/' + word.value; return false;">
-      <input type="text" id="word"><br><br>
-      <input type="submit" id="submit" value="ঠিক কি?">
+    <h2>ঠিক বানানটা কি হবে?</h2>
+    <p>নিচে লিখুন</p>
+    <form onsubmit="window.location = document.URL + 'search/' + word_input.value; return false;">
+      <input type="text" id="word_input"><br><br>
+      <input type="submit" id="submit_word" value="ঠিক কি?">
     </form>
-
-    <script>
-      
-    </script>
   </body>
 </html>
