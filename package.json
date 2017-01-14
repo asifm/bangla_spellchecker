@@ -4,7 +4,7 @@
   "description": "A Bangla spell-cheker with a web interface.",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon ./bin/www"
+    "start": "node ./bin/www"
   },
   "keywords": [
     "Bangla",
