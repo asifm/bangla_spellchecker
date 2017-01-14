@@ -1,13 +1,41 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My response</title>
+    <title>বানান ঠিক?</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1>
-      <%- reply.suggestions %>
-    </h1>
+
+  
+    <p class="intro">
+      <%- reply.origWord %>?
+    </p>
+
+    <% if (reply.err) { %>
+    
+       <p>কোথাও কোন সমস্যা হচ্ছে। নিচে দেওয়া ঠিকানায় ইমেইল করুন, যাতে আমরা এর সমাধান করতে পারি।</p>
+    
+    <% } else if (reply.correct) { %>
+     
+       <p><strong>সম্ভবত ঠিক।</strong> শব্দটি আমার অভিধানে আছে। </p>
+
+    <% } else if ((!reply.correct) && (reply.suggestions.length == 0)) { %>
+
+       <p>অন্য ভাষায় লিখলেন কি? আমি শুধু বাংলা বর্ণ চিনতে পারি।</p>
+
+    <% } else if (reply.suggestions.length > 0) { %>
+
+       <p><strong>সম্ভবত ভুল।</strong> শব্দটি আমার অভিধানে নেই। আপনি হয়ত খুঁজছেন:</p>
+
+      <ul class="word_list">
+      <% for (el of reply.suggestions) { %>
+        <li><%= el %></li>
+      <% } %>
+      </ul>
+
+     <% } %>
+
+    <br><p><a href="../../"> আবার খুঁজুন</a></p>
 
   </body>
 </html>
