@@ -15,7 +15,7 @@ A Bangla spellchecker with a web interface. The spellchecker will suggest correc
 
 [x] API
 [x] [Chrome extension](https://chrome.google.com/webstore/detail/bangla-banan/ccgiicmknbnmpdidmdfbnonejhodcfpi?hl=en). Repo [here](https://github.com/asifm/bangla-banan-chrome-ext).
-[ ] Transliteration from Latin script
+[x] Transliteration from Latin script
 
 ## Longer-term plans
 
@@ -27,7 +27,8 @@ A Bangla spellchecker with a web interface. The spellchecker will suggest correc
 
 ## TODO
 [ ] Document API
-[ ] Implement transliteration with Google API. It's deprecated, but still works.
+[ ] Bug fixes: catch illegal parameters
+
 
 ## Data
 

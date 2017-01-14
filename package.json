@@ -1,10 +1,10 @@
 {
   "name": "bangla-spellcheck",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A Bangla spell-cheker with a web interface.",
   "main": "app.js",
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "nodemon ./bin/www"
   },
   "keywords": [
     "Bangla",

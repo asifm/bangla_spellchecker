@@ -2,16 +2,28 @@ body {
   padding: 50px;
   font-size: 1.5em; 
   font-family: Helvetica, Arial, sans-serif;
+  background-color: whitesmoke;
+  margin: 25px;
+  margin-left: 40px;
+  line-height: 1.5em;
+}
+
+h2 {
+  font-size: 120%;
+  color: steelblue;
 }
 
 a {
-  color: #00B7FF;
+  color: lightsteelblue;
   text-decoration: none;
 }
 
 .word_list {
   color: slateblue;
   list-style: none;
+  border-left-color: lightsteelblue;
+  border-left-width: 3px;
+  border-left-style: dotted;
 }
 
 .intro {
@@ -19,17 +31,32 @@ a {
 }
 
 #word_input {
-  font-size: 2em;
+  font-size: 1.3em;
+  width: 350px;
+  padding: 10px;
 }
 
 #submit_word {
   font-size: 1.2em;
 }
 
+.note {
+  font-size: 75%;
+  color: #333;
+}
 .correct {
   color: green;
 }
 
 .wrong {
   color: red;
+}
+
+.btn {
+  background-color: #eee;
+  color: gray;
+  padding: 10px;
+}
+.btn:hover {
+  color: black;
 }

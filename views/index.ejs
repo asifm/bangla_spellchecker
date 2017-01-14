@@ -1,15 +1,51 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>বাংলা বানান</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  
+  
+    <script type="text/javascript">
+
+      // Load the Google Transliterate API
+      google.load("elements", "1", {
+            packages: "transliteration"
+          });
+
+      function onLoad() {
+        var options = {
+            sourceLanguage:
+                google.elements.transliteration.LanguageCode.ENGLISH,
+            destinationLanguage:
+                [google.elements.transliteration.LanguageCode.BENGALI],
+            shortcutKey: 'ctrl+g',
+            transliterationEnabled: true
+        };
+
+        // Create an instance on TransliterationControl with the required
+        // options.
+        var control = new google.elements.transliteration.TransliterationControl(options);
+
+        // Enable transliteration in the textbox
+        control.makeTransliteratable(['word_input']);
+      }
+      google.setOnLoadCallback(onLoad);
+    </script>
+  
+
   </head>
   <body>
     <h2>ঠিক বানানটা কি হবে?</h2>
     <p>নিচে লিখুন</p>
+    <p class="note">বাংলা বা ইংরেজি (লাতিন) হরফে। ইংরেজিতে লিখলে শেষে একবার spacebar চাপুন (বাংলায় রূপান্তর করতে)।</p>
+    <br>
     <form onsubmit="window.location = document.URL + 'search/' + word_input.value; return false;">
       <input type="text" id="word_input"><br><br>
-      <input type="submit" id="submit_word" value="ঠিক কি?">
+      <input type="submit" id="submit_word" value="ঠিক কি?" class="btn">
     </form>
-  </body>
+    <br><br><br>
+    <p class="note">যদি ইংরেজি/লাতিন হরফে লেখা শব্দের বাংলা রূপান্তর ঠিকমত না হয়, তবে দুইবার backspace চাপুন।<br> একটি শব্দতালিকা পাবেন, সেখান থেকে বাছাই করুন।</p>
+</body>
 </html>
