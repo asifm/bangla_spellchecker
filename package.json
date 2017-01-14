@@ -4,7 +4,7 @@
   "description": "A Bangla spell-cheker with a web interface.",
   "main": "app.js",
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "nodemon ./bin/www"
   },
   "keywords": [
     "Bangla",
@@ -17,6 +17,7 @@
   "author": "Asif Mehedi",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.15.2",
     "ejs": "^2.5.5",
     "express": "^4.14.0",
     "nodehun": "^2.0.11"

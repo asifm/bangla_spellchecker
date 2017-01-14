@@ -4,6 +4,7 @@ var express = require("express")
 
 var index = require('./routes/index')
 var search = require('./routes/search')
+// var result = require('./routes/result')
 
 var app = express()
 
@@ -13,6 +14,7 @@ app.set('view engine', 'ejs')
 
 app.use('/', index)
 app.use('/', search)
+// app.use('/', result)
 
 app.use(express.static("public"))
 

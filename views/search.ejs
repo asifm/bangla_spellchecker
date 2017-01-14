@@ -5,35 +5,10 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    
-    <div class="intro"><%- intro %></div>
+    <h1>
+      <%- reply.suggestions %>
+    </h1>
 
-    <% if (flag == 'error') { %>
-    
-       <p>কোথাও কোন সমস্যা হচ্ছ। নিচে দেওয়া ঠিকানায় ইমেইল করুন, যাতে আমরা এর সমাধান করতে পারি।</p>
-    
-    <% } else if (flag == 'correct') { %>
-     
-       <p><strong>সম্ভবত ঠিক।</strong> শব্দটি আমার অভিধানে আছে। </p>
-
-    <% } else if (flag =='foreign') { %>
-
-       <p>অন্য ভাষায় লিখলেন কি? আমি শুধু বাংলা বর্ণ চিনতে পারি।</p>
-
-    <% } else if (flag == 'wrong') { %>
-
-       <p><strong>সম্ভবত ভুল।</strong> শব্দটি আমার অভিধানে নেই। আপনি হয়ত খুঁজছেন:</p>
-
-      <ul class="word_list">
-      <% for (el of reply) { %>
-        <li><%= el %></li>
-      <% } %>
-      </ul>
-
-     <% } %>
-
-    <br><p><a href="../../">আবার খুঁজুন</a></p>
-  
   </body>
 </html>
 
