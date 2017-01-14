@@ -17,7 +17,7 @@
     
     <% } else if (reply.correct) { %>
      
-       <p><strong>সম্ভবত ঠিক।</strong> শব্দটি আমার অভিধানে আছে। </p>
+       <p><strong class="correct">সম্ভবত ঠিক।</strong> শব্দটি আমার অভিধানে আছে। </p>
 
     <% } else if ((!reply.correct) && (reply.suggestions.length == 0)) { %>
 
@@ -25,7 +25,7 @@
 
     <% } else if (reply.suggestions.length > 0) { %>
 
-       <p><strong>সম্ভবত ভুল।</strong> শব্দটি আমার অভিধানে নেই। আপনি হয়ত খুঁজছেন:</p>
+       <p><strong class="wrong">সম্ভবত ভুল।</strong> শব্দটি আমার অভিধানে নেই। আপনি হয়ত খুঁজছেন:</p>
 
       <ul class="word_list">
       <% for (el of reply.suggestions) { %>

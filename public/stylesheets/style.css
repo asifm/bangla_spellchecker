@@ -6,23 +6,30 @@ body {
 
 a {
   color: #00B7FF;
+  text-decoration: none;
 }
 
 .word_list {
-  color: #d30000;
+  color: slateblue;
+  list-style: none;
 }
 
 .intro {
-  color: #aaaaaa;
+  color: lightsteelblue;
 }
 
 #word_input {
   font-size: 2em;
 }
+
 #submit_word {
   font-size: 1.2em;
 }
 
-a {
-  text-decoration: none;
+.correct {
+  color: green;
+}
+
+.wrong {
+  color: red;
 }
