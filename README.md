@@ -13,21 +13,21 @@ A Bangla spellchecker with a web interface. The spellchecker will suggest correc
 
 ## Plans
 
-[x] API
-[x] [Chrome extension](https://chrome.google.com/webstore/detail/bangla-banan/ccgiicmknbnmpdidmdfbnonejhodcfpi?hl=en). Repo [here](https://github.com/asifm/bangla-banan-chrome-ext).
-[x] Transliteration from Latin script
+[x] API  
+[x] [Chrome extension](https://chrome.google.com/webstore/detail/bangla-banan/ccgiicmknbnmpdidmdfbnonejhodcfpi?hl=en). Repo [here](https://github.com/asifm/bangla-banan-chrome-ext).  
+[x] Transliteration from Latin script  
 
 ## Longer-term plans
 
-[ ] Improved suggestions
-    - Stemming/lemmatization support (so that inflected words are correctly identified)
-    - Better suggestions for frequently misspelt words
-    - Following a standard set of spelling rules
-[ ] Ability to check all words in a given document (similar to MS Word)
+[ ] Improved suggestions  
+    - Stemming/lemmatization support (so that inflected words are correctly identified)  
+    - Better suggestions for frequently misspelt words  
+    - Following a standard set of spelling rules  
+[ ] Ability to check all words in a given document (similar to MS Word)  
 
 ## TODO
-[ ] Document API
-[ ] Bug fixes: catch illegal parameters
+[ ] Document API  
+[ ] Bug fixes: catch illegal parameters  
 
 
 ## Data
